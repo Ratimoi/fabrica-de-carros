@@ -57,11 +57,11 @@ function imprimirVeiculo(veiculo: Veiculo): void {
     console.log("Velocidade:", veiculo.velocidade);
 }
 
-/*function reduzirMarcha(veiculo: Veiculo): void {
+function reduzirMarcha(veiculo: Veiculo): void {
     if (veiculo.marchaAtual > 0) {
         veiculo.marchaAtual--;
         console.log("Marcha reduzida para:", veiculo.marchaAtual);
     } else {
         console.log("Já está no ponto morto!");
     }
-}*/
+}
