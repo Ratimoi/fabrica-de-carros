@@ -23,6 +23,8 @@ while(true){
         case 1:
             acelerar(carro);
             break;
+
+        
     
         default:
             break;
@@ -46,16 +48,20 @@ function criaVeiculo(): Veiculo{
     return veiculo;
 }
 
-function frear(veiculo: Veiculo): void {
-    if (veiculo.velocidade > 0) {
-        veiculo.velocidade -= veiculo.potencia * 0.1;
-        
-        if (veiculo.velocidade < 0) {
-            veiculo.velocidade = 0;
-        }
+function imprimirVeiculo(veiculo: Veiculo): void {
+    console.log("===== DADOS DO VEÍCULO =====");
+    console.log("Marca:", veiculo.marca);
+    console.log("Modelo:", veiculo.modelo);
+    console.log("Potência:", veiculo.potencia);
+    console.log("Marcha atual:", veiculo.marchaAtual);
+    console.log("Velocidade:", veiculo.velocidade);
+}
 
-        console.log(`Velocidade atual: ${veiculo.velocidade.toFixed(2)} km/h`);
+function reduzirMarcha(veiculo: Veiculo): void {
+    if (veiculo.marchaAtual > 0) {
+        veiculo.marchaAtual--;
+        console.log("Marcha reduzida para:", veiculo.marchaAtual);
     } else {
-        console.log("O veículo já está parado.");
+        console.log("Já está no ponto morto!");
     }
 }
