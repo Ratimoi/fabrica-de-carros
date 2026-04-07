@@ -45,3 +45,12 @@ function criaVeiculo(): Veiculo{
     veiculo.numeroMarchas = +teclado('Número de marchas: ');
     return veiculo;
 }
+
+function imprimirVeiculo(veiculo: Veiculo): void {
+    console.log("===== DADOS DO VEÍCULO =====");
+    console.log("Marca:", veiculo.marca);
+    console.log("Modelo:", veiculo.modelo);
+    console.log("Potência:", veiculo.potencia);
+    console.log("Marcha atual:", veiculo.marchaAtual);
+    console.log("Velocidade:", veiculo.velocidade);
+}
