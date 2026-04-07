@@ -23,6 +23,8 @@ while(true){
         case 1:
             acelerar(carro);
             break;
+
+        
     
         default:
             break;
@@ -53,4 +55,13 @@ function imprimirVeiculo(veiculo: Veiculo): void {
     console.log("Potência:", veiculo.potencia);
     console.log("Marcha atual:", veiculo.marchaAtual);
     console.log("Velocidade:", veiculo.velocidade);
+}
+
+function reduzirMarcha(veiculo: Veiculo): void {
+    if (veiculo.marchaAtual > 0) {
+        veiculo.marchaAtual--;
+        console.log("Marcha reduzida para:", veiculo.marchaAtual);
+    } else {
+        console.log("Já está no ponto morto!");
+    }
 }
