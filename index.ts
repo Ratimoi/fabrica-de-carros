@@ -48,6 +48,15 @@ function criaVeiculo(): Veiculo{
     return veiculo;
 }
 
+function subirMarcha(veiculo: Veiculo): Veiculo {
+  if (veiculo.marchaAtual < veiculo.numeroMarchas) {
+    veiculo.marchaAtual++;
+    console.log(`Marcha atual: ${veiculo.marchaAtual}`);
+  } else {
+    console.log("Já está na marcha máxima");
+  
+  return veiculo;
+  }
 function imprimirVeiculo(veiculo: Veiculo): void {
     console.log("===== DADOS DO VEÍCULO =====");
     console.log("Marca:", veiculo.marca);
