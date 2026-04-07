@@ -45,3 +45,13 @@ function criaVeiculo(): Veiculo{
     veiculo.numeroMarchas = +teclado('Número de marchas: ');
     return veiculo;
 }
+
+function subirMarcha(veiculo: Veiculo): Veiculo {
+  if (veiculo.marchaAtual < veiculo.numeroMarchas) {
+    veiculo.marchaAtual++;
+    console.log(`Marcha atual: ${veiculo.marchaAtual}`);
+  } else {
+    console.log("Já está na marcha máxima");
+  }
+  return veiculo;
+}
